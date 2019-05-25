@@ -1,0 +1,20 @@
+.glow {
+  opacity: 1 !important;
+  animation: glowing 1s ease-out infinite; }
+
+@keyframes glowing {
+  0% {
+    filter: drop-shadow(0px 0px 80px rgba(224, 67, 24, 0.8)); }
+  15% {
+    filter: drop-shadow(0px 0px 50px rgba(66, 116, 196, 0.8)); }
+  30% {
+    filter: drop-shadow(0px 0px 80px rgba(224, 67, 24, 0.8)); }
+  45% {
+    filter: drop-shadow(0px 0px 50px #4274c4); }
+  60% {
+    filter: drop-shadow(0px 0px 80px #e04318); }
+  85% {
+    filter: drop-shadow(0px 0px 50px rgba(66, 116, 196, 0.8)); }
+  100% {
+    filter: drop-shadow(0px 0px 80px rgba(224, 67, 24, 0.8)); } }
+

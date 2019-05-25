@@ -1,0 +1,28 @@
+{
+  "description": " ",
+  "version": "0.0.0.1",
+  "name": "Firebase Chrome Extenison",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "24": "icons/icon-24.png",
+      "32": "icons/icon-32.png"
+    },
+    "default_title": "Firebase Chrome extension",
+    "default_popup": "/popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' ; object-src 'self'",
+  "permissions": ["webNavigation", "activeTab", "tabs", "<all_urls>"],
+  "content_scripts": [{
+    "matches": ["http://*.gob.mx/*", "https://*.gob.mx/*"],
+    "css": ["styles.css"],
+    "js": ["bundle.js"],
+    "run_at": "document_end"
+  }],
+  "web_accessible_resources": ["*.png", "styles.css"],
+  "manifest_version": 2
+}
